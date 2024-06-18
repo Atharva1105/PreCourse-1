@@ -69,10 +69,12 @@ class SinglyLinkedList:
 
         curr = self.head
 
-        # while (curr.next!= None) :
-        #
-        #     if curr.data == key :
+        while (curr.next.data != key) :
 
+            curr = curr. next
+
+
+        curr.next = curr.next.next
 
 
 s = SinglyLinkedList()
@@ -80,5 +82,8 @@ s = SinglyLinkedList()
 s.append(10)
 s.append(20)
 s.append(30)
+
+s.remove(20)
+
 
 print(s.find(10))
